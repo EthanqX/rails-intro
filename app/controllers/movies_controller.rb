@@ -13,19 +13,29 @@ class MoviesController < ApplicationController
       # @sort_by = params[:sort_by]
       # @movies = Movie.with_ratings(@ratings_to_show, @sort_by)
 
-      @all_ratings = Movie.all_ratings
-      @ratings_to_show = params[:ratings_hash]&.keys || Movie.all_ratings
-      sort_by = params[:sort_by] || session[:sort_by] || 'id'
+      # @all_ratings = Movie.all_ratings
+      # @ratings_to_show = params[:ratings_hash]&.keys || Movie.all_ratings
+      # @ratings_to_show_list = @ratings_to_show
+      # @sort_by = params[:sort_by] || session[:sort_by] || 'id'
 
-      if params[:ratings_list]
-        @ratings_to_show_list = params[:ratings_list] || session[:ratings_list]
-      else
-        @ratings_to_show_list = @ratings_to_show
-      end
+      # if params[:ratings_list]
+      #   @ratings_to_show_list = params[:ratings_list]
+      # elsif session[:ratings_to_show_list] 
+      #   @ratings_to_show_list = session[:ratings_to_show_list]
+      # end
       
-      @movies = Movie.with_ratings(@ratings_to_show_list, sort_by)
-      @sort_by = sort_by 
+      # @movies = Movie.with_ratings(@ratings_to_show_list, @sort_by) 
 
+      # session['ratings_to_show_list'] = @ratings_to_show_list
+      # session['sort_by'] = @sort_by
+      @all_ratings = Movie.all_ratings
+      ratings_list = params[:ratings]&.keys || session[:ratings] || Movie.all_ratings
+      sort_by = params[:sort_by] || session[:sort_by] || 'id'
+      @ratings_to_show_hash = Hash[ratings_list.collect { |item| [item, "1"] }]
+      @movies = Movie.with_ratings(ratings_list, sort_by)
+      @sort_by = sort_by
+      session['ratings'] = params[:ratings]&.keys || session[:ratings] || Movie.all_ratings
+      session['sort_by'] = @sort_by
     end
   
     def new
@@ -62,5 +72,7 @@ class MoviesController < ApplicationController
     def movie_params
       params.require(:movie).permit(:title, :rating, :description, :release_date)
     end
+
+
 
   end
