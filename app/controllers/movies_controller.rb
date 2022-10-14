@@ -7,13 +7,25 @@ class MoviesController < ApplicationController
     end
   
     def index
+      # @all_ratings = Movie.all_ratings
+      # ratings_list = params[:ratings]&.keys || session[:ratings] || Movie.all_ratings
+      # ratings_to_show_hash = Hash[ratings_list.collect { |item| [item, "1"] }]
+      # @sort_by = params[:sort_by]
+      # @movies = Movie.with_ratings(@ratings_to_show, @sort_by)
+
       @all_ratings = Movie.all_ratings
-      if params[:ratings].nil?
-        @ratings_to_show = @all_ratings.clone
+      @ratings_to_show = params[:ratings_hash]&.keys || Movie.all_ratings
+      sort_by = params[:sort_by] || session[:sort_by] || 'id'
+
+      if params[:ratings_list]
+        @ratings_to_show_list = params[:ratings_list] || session[:ratings_list]
       else
-        @ratings_to_show = params[:ratings].keys
+        @ratings_to_show_list = @ratings_to_show
       end
-      @movies = Movie.with_ratings(@ratings_to_show)
+      
+      @movies = Movie.with_ratings(@ratings_to_show_list, sort_by)
+      @sort_by = sort_by 
+
     end
   
     def new
@@ -50,4 +62,5 @@ class MoviesController < ApplicationController
     def movie_params
       params.require(:movie).permit(:title, :rating, :description, :release_date)
     end
+
   end

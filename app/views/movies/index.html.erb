@@ -5,8 +5,8 @@
   Include:
   <% @all_ratings.each do |rating| %>
     <div class="form-check  form-check-inline">
-      <%= label_tag "ratings[#{rating}]", rating, class: 'form-check-label' %>
-      <%= check_box_tag "ratings[#{rating}]", "1",  @ratings_to_show.include?(rating), class: 'form-check-input' %>
+      <%= label_tag "ratings_hash[#{rating}]", rating, class: 'form-check-label' %>
+      <%= check_box_tag "ratings_hash[#{rating}]", "1",  @ratings_to_show.include?(rating), class: 'form-check-input' %>
     </div>
   <% end %>
   <%= submit_tag 'Refresh', id: 'ratings_submit', class: 'btn btn-primary' %>
@@ -17,9 +17,17 @@
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <th>Movie Title</th>
+
+      <th><%= link_to 'Movie Title', 
+        movies_path({sort_by: 'title', ratings_list: @ratings_to_show_list}), 
+        method: :get, id: 'title_header', 
+        class: ('p-3 mb-2 bg-warning hilite' if @sort_by == 'title') %></th>
+
       <th>Rating</th>
-      <th>Release Date</th>
+      <th><%= link_to 'Release Date',
+        movies_path({sort_by: 'release_date', ratings_list: @ratings_to_show_list}), 
+        method: :get, id: 'release_date_header', 
+        class: ('p-3 mb-2 bg-warning hilite' if @sort_by == 'release_date')%></th>
       <th>More Info</th>
     </tr>
   </thead>

@@ -4,11 +4,11 @@ class Movie < ActiveRecord::Base
     Movie.pluck(:rating).uniq
   end
 
-  def self.with_ratings(ratings)
-    if ratings.nil?
-      Movie.all
+  def self.with_ratings(ratings, sort_by)
+    if sort_by.nil?
+      Movie.all.order(sort_by)
     else
-      Movie.where(rating: ratings)
+      Movie.where(rating: ratings).order(sort_by)
     end
   end
 
