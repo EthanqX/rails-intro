@@ -1,0 +1,663 @@
+  [1m[36m (66.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (60.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20150809022253)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/codio/workspace/rails-intro/db/migrate/20150809022253_create_movies.rb:10)
+  [1m[35m (0.2ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150809022253"]]
+  [1m[35m (55.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2022-10-13 22:59:42.172265"], ["updated_at", "2022-10-13 22:59:42.172265"]]
+  [1m[35m (62.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2022-10-13 22:59:42.236027"], ["updated_at", "2022-10-13 22:59:42.236027"]]
+  [1m[36m (57.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2022-10-13 22:59:42.294414"], ["updated_at", "2022-10-13 22:59:42.294414"]]
+  [1m[35m (55.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2022-10-13 22:59:42.351118"], ["updated_at", "2022-10-13 22:59:42.351118"]]
+  [1m[36m (54.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2022-10-13 22:59:42.406973"], ["updated_at", "2022-10-13 22:59:42.406973"]]
+  [1m[35m (54.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2022-10-13 22:59:42.462580"], ["updated_at", "2022-10-13 22:59:42.462580"]]
+  [1m[36m (54.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2022-10-13 22:59:42.518587"], ["updated_at", "2022-10-13 22:59:42.518587"]]
+  [1m[35m (57.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2022-10-13 22:59:42.577675"], ["updated_at", "2022-10-13 22:59:42.577675"]]
+  [1m[36m (52.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2022-10-13 22:59:42.631707"], ["updated_at", "2022-10-13 22:59:42.631707"]]
+  [1m[35m (56.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2022-10-13 22:59:42.689200"], ["updated_at", "2022-10-13 22:59:42.689200"]]
+  [1m[36m (60.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-13 23:02:47 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 249ms (Views: 247.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-13 23:02:47 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-13 23:02:47 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-13 23:02:47 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-13 23:02:47 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies/new" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-13 23:03:08 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/1" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-13 23:06:01 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-13 23:35:41 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3: 
+    4: <%= form_tag movies_path, method: :get, id: 'ratings_form' do %>
+    5:   Include:
+    6:   <% @all_ratings.each do |rating| %>
+    7:     <div class="form-check  form-check-inline">
+    8:       <%= label_tag "ratings[#{rating}]", rating, class: 'form-check-label' %>
+    9:       <%= check_box_tag "ratings[#{rating}]", "1",  @ratings_to_show.include?(rating), class: 'form-check-input' %>
+  app/views/movies/index.html.erb:6:in `block in _app_views_movies_index_html_erb___852780080969074565_70191749449920'
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb___852780080969074565_70191749449920'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-13 23:35:45 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3: 
+    4: <%= form_tag movies_path, method: :get, id: 'ratings_form' do %>
+    5:   Include:
+    6:   <% @all_ratings.each do |rating| %>
+    7:     <div class="form-check  form-check-inline">
+    8:       <%= label_tag "ratings[#{rating}]", rating, class: 'form-check-label' %>
+    9:       <%= check_box_tag "ratings[#{rating}]", "1",  @ratings_to_show.include?(rating), class: 'form-check-input' %>
+  app/views/movies/index.html.erb:6:in `block in _app_views_movies_index_html_erb___852780080969074565_70191749449920'
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb___852780080969074565_70191749449920'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.2ms)
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:20:41 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all_ratings' for #<Class:0x0000563d76dcc580>):
+  app/controllers/movies_controller.rb:11:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:29:20 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all_ratings' for #<Class:0x0000563d76dcc580>):
+  app/controllers/movies_controller.rb:11:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:29:43 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `distinct' for ["G", "R", "R", "PG-13", "PG-13", "R", "G", "PG", "PG", "G"]:Array):
+  app/models/movie.rb:4:in `all_ratings'
+  app/controllers/movies_controller.rb:11:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.7ms)
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:30:21 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `keys' for nil:NilClass):
+  app/controllers/movies_controller.rb:12:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.7ms)
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:30:54 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `is' for #<MoviesController:0x00007fad943c4fd0>):
+  app/controllers/movies_controller.rb:12:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.3ms)
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:31:30 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `keys' for nil:NilClass):
+  app/controllers/movies_controller.rb:12:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:31:50 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  app/controllers/movies_controller.rb:12:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.4ms)
+
+
+Started GET "/" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:32:11 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 214ms (Views: 211.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:32:14 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:32:15 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:37:57 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/rails-intro/app/models/movie.rb:10: syntax error, unexpected end-of-input, expecting end):
+  app/models/movie.rb:10: syntax error, unexpected end-of-input, expecting end
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:38:40 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/rails-intro/app/models/movie.rb:10: syntax error, unexpected end-of-input, expecting end):
+  app/models/movie.rb:10: syntax error, unexpected end-of-input, expecting end
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:38:42 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/rails-intro/app/models/movie.rb:10: syntax error, unexpected end-of-input, expecting end):
+  app/models/movie.rb:10: syntax error, unexpected end-of-input, expecting end
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.9ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:38:55 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/rails-intro/app/models/movie.rb:10: syntax error, unexpected end-of-input, expecting end):
+  app/models/movie.rb:10: syntax error, unexpected end-of-input, expecting end
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.9ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:38:55 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/rails-intro/app/models/movie.rb:10: syntax error, unexpected end-of-input, expecting end):
+  app/models/movie.rb:10: syntax error, unexpected end-of-input, expecting end
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.8ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:46:00 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/rails-intro/app/models/movie.rb:13: syntax error, unexpected end-of-input, expecting end):
+  app/models/movie.rb:13: syntax error, unexpected end-of-input, expecting end
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:46:24 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:46:32 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:46:33 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:46:34 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:46:34 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:46:35 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:47:20 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:47:22 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:47:23 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:47:23 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:47:46 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:47:48 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:47:49 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:47:49 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:47:49 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:47:50 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:54:36 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:54:37 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:54:38 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:54:38 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:54:39 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:54:39 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:57:05 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'G'[0m
+  Rendered movies/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:57:08 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" = 'R'[0m
+  Rendered movies/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:57:09 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'R', 'PG-13', 'PG')[0m
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 2600:1700:5b23:4410:c847:7e82:2376:efac at 2022-10-14 00:58:00 +0000
+Cannot render console from 2600:1700:5b23:4410:c847:7e82:2376:efac! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
